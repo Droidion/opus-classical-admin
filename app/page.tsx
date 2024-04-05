@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Spinner } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import { useClerk, useUser } from "@clerk/nextjs";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 function Greeting() {
   const { user } = useUser();
@@ -61,6 +62,9 @@ export default function Home() {
         )}
         {isLoaded && !isSignedIn && <AuthButtons />}
         {!isLoaded && <Spinner />}
+      </div>
+      <div className="fixed bottom-4">
+        <ThemeSwitcher />
       </div>
     </div>
   );
