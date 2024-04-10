@@ -1,14 +1,17 @@
 import { eq } from "drizzle-orm";
 import type { DrizzleDb } from "../connect";
 import { type Country, type NewCountry, countries } from "../schema/countries";
+import { sort } from "fast-sort";
 
 export async function getCountries(db: DrizzleDb): Promise<Country[]> {
-  return await db
+  const result = await db
     .select({
       id: countries.id,
       name: countries.name,
     })
     .from(countries);
+
+  return sort(result).asc((c) => c.name);
 }
 
 export async function addCountry(

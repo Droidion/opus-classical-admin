@@ -5,7 +5,7 @@ import React from "react";
 
 export function Menu() {
   return (
-    <div className="w-48 px-2">
+    <div className="w-60 px-2">
       <Listbox aria-label="Actions" onAction={(key) => alert(key)}>
         <ListboxItem key="new">Countries</ListboxItem>
         <ListboxItem key="copy">Other Item</ListboxItem>
