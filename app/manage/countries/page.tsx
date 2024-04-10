@@ -10,8 +10,7 @@ export default async function CountriesPage() {
   const countries = await getCountries(db);
   return (
     <>
-      <div className="font-semibold text-lg my-4">Countries</div>
-      <Divider />
+      <div className="font-semibold text-lg mb-4">Countries</div>
       <CountriesTable countries={countries} />
     </>
   );

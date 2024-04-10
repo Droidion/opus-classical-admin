@@ -19,7 +19,7 @@ export default function ManageLayout({
       <Header />
       <div id="main" className="flex flex-grow">
         <Menu />
-        <main className="w-full">{children}</main>
+        <main>{children}</main>
       </div>
     </div>
   );
