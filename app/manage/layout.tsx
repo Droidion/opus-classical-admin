@@ -15,12 +15,9 @@ export default function ManageLayout({
   }
 
   return (
-    <div id="app" className="flex flex-col h-screen w-screen">
-      <Header />
-      <div id="main" className="flex flex-grow">
-        <Menu />
-        <main>{children}</main>
-      </div>
+    <div className="flex flex-grow max-h-screen">
+      <Menu />
+      <main className="overflow-auto w-full pt-5 pr-6">{children}</main>
     </div>
   );
 }

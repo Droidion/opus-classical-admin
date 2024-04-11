@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
   return (
     <Switch
       isSelected={theme === "light"}
-      size="lg"
+      size="sm"
       color="primary"
       onChange={() => {
         setTheme(theme === "light" ? "dark" : "light");

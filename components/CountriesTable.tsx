@@ -20,7 +20,11 @@ interface CountriesPageProps {
 
 export function CountriesTable({ countries }: CountriesPageProps) {
   return (
-    <Table removeWrapper={true} aria-label="Example static collection table">
+    <Table
+      className="w-fit"
+      removeWrapper={true}
+      aria-label="Example static collection table"
+    >
       <TableHeader>
         <TableColumn>ID</TableColumn>
         <TableColumn>NAME</TableColumn>
